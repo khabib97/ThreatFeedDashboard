@@ -1,5 +1,6 @@
 # Threat Feed Dashboard
 
+![dashboard][https://drive.google.com/file/d/1aixKBbMDA_einJlAltVFz8Uu57D8tb66/view?usp=sharing]
 ## Integration of IntelMQ, ElasticSearch and Kibana
 
 At first we should know about them and their usages.
@@ -199,10 +200,10 @@ In pipline, you should define bots input and output data queue. To write a prope
 
 ### Create elasticsearh-output
 
-* Add a elasticsearch-output node from intelmq-manager>configuration. Go left side menubar Output > Elasticsearch, drag and drop new node. 
+* Add a elasticsearch-output node from intelmq-manager>configuration (gui). Go left side menubar Output > Elasticsearch, drag and drop new node. 
 Then update proper configuration for runtime.conf and pipline.conf. Add destination-queue and source-queue.
 
-### Start BOTS
+### Run your BOTS
 
 * Now you can run your BOTS from intelmq-manager gui or you can using console 
 
@@ -227,7 +228,7 @@ $intelmqctl check
 
 * After starting bots, if everything ok, you will get **intelmq** data in **kibana** for creating *index-pattern*. 
 
-### Dashboard
+### Visualize on dashboard
 
 * Create index-pattern.
 
