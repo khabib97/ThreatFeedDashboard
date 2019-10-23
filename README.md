@@ -14,7 +14,8 @@ At first we should know about them and their usages.
 When I tried to integrate them, there was very little guide. Though their personal documentations are really great. So, I start preparing a guideline based on my experience. 
 
 
->OS : Ubuntu 18.04 LTS. 
+>**Software Requirements:** 
+OS : Ubuntu 18.04 LTS. 
 IntelMQ : 2.1.0
 IntelMQ-Manager : 2.1.0
 ElasticSearch : 6.8.3
@@ -22,13 +23,13 @@ Kibana : 6.7.1
 Java : Open JDK 8
 Python : 3.6.8
 
->**Hardware Requirements** 
+>**Hardware Requirements:** 
 Minimum Core i5
 Ram :  8 GB
 Core : 2
 Process : 2
 
-Based on OS and Software version, your installation guide could be changed, but integration procedure will be same. 
+Based on OS and Software version, your installation guide could be changed, but integration procedure will be same.
 
 ## Step 1 : Installation
 
@@ -71,6 +72,10 @@ $cp -a examples/* .
 $systemctl enable redis-server.service
 $systemctl start redis-server.service
 ```
+
+>Intelmq basic dataflow diagram
+
+![dataflow](/img/inelmq-dataflow.png)
 
 ### How to install IntelMQ-Manager?
 
@@ -206,7 +211,11 @@ Then update proper configuration for runtime.conf and pipeline.conf. Add destina
 
 ![topology](/img/intelmq-conf.png)
 
+---
+
 ![pipeline.cof](/img/pipeline.conf.png)
+
+---
 
 ![runtime.cof](/img/runtime.conf.png)
 
