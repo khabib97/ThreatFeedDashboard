@@ -66,7 +66,7 @@ $sudo intelmqsetup
 $cd /opt/intelmq/etc
 $cp -a examples/* .
 ```
-* Configure Services. Enable and Start Redise Service
+* Configure Services. Enable and Start Redis Service
 
 ```bash
 $systemctl enable redis-server.service
