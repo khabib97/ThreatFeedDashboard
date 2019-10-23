@@ -11,7 +11,7 @@ At first we should know about them and their usages.
 
 * **Kibana** is an open source data visualization plugin for Elasticsearch.
 
-When I tried to integrate them, there was very little guide. Though their personal documentations are realy great. So, I start preparing a guideline based on my experience. 
+When I tried to integrate them, there was very little guide. Though their personal documentations are really great. So, I start preparing a guideline based on my experience. 
 
 
 >OS : Ubuntu 18.04 LTS. 
@@ -51,7 +51,7 @@ $sudo apt-get install bash-completion jq
 $sudo apt-get install python3-sleekxmpp python3-pymongo python3-psycopg2
 ```
 
-* Now we are ready for installing intelmq. We need root privilage. So,
+* Now we are ready for installing intelmq. We need root privilege. So,
 
 ```bash
 $sudo -i
@@ -95,7 +95,7 @@ $sudo apt-get install intelmq-manager
 
 **NOTE:** After installation you may face some issues in intelmq-manager for python libraryYou can ignore them. In that case, intelmq-manager gui will not behave properly. So, it is better to solve this.
 
-The warning or error message lookes like :
+The warning or error message looks like :
 
 ```
  RequestsDependencyWarning: urllib3 (1.24.3) or chardet (3.0.4) doesn't match a supported version!RequestsDependencyWarning)
@@ -117,7 +117,7 @@ $chmod 664 /etc/intelmq/*.conf /etc/intelmq/manager/positions.conf
 
 ### How to install ElasticSearch?
 
-* Choose your prefered elasticsearch .deb package from elasticsearch website.
+* Choose your preferred elasticsearch .deb package from elasticsearch website.
 
 * Run the following command to start and stop elasticsearch
 
@@ -156,7 +156,7 @@ sudo -i service kibana stop
 ```bash
 $pip3 install elasticsearch
 ```
-* Now downaload elasticmapper script from git intemq repo(intemq/contrib/elasticsearch directory).
+* Now download elasticmapper script from git intemq repo(intemq/contrib/elasticsearch directory).
 
 * Go to the download folder and give execut permission to **elasticmapper** file.
 
@@ -164,7 +164,7 @@ $pip3 install elasticsearch
 $chmod +x elasticmapper
 ```
 
-**Note:** After ElasticSearch version 7, index-type is depricated. So, you have to update elasticmapper python code. Update data json generated code, remove index-type. To avoid this error, I have installed elastisearch 6.8.3 . After updating data mapping, it lookes like :  
+**Note:** After ElasticSearch version 7, index-type is deprecated. So, you have to update elasticmapper python code. Update data json generated code, remove index-type. To avoid this error, I have installed elastisearch 6.8.3 . After updating data mapping, it looks like :  
 
 ```
 data = {
@@ -182,7 +182,7 @@ data = {
 
 ### Intelmq-manager
 
-* Using intelmq-manager you can darw your feed architecture or topology. It is one kind of darg and drop model. Your topology will be :
+* Using intelmq-manager you can draw your feed architecture or topology. It is one kind of darg and drop model. Your topology will be :
 
 ```
 Feed BOT > Parser BOT > Expert BOT > Output
