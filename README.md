@@ -1,6 +1,6 @@
 # Threat Feed Dashboard
 
-![dashboard][https://drive.google.com/file/d/1aixKBbMDA_einJlAltVFz8Uu57D8tb66/view?usp=sharing]
+![dashboard](/img/main_dashboard.png)
 ## Integration of IntelMQ, ElasticSearch and Kibana
 
 At first we should know about them and their usages.
