@@ -75,7 +75,7 @@ $systemctl start redis-server.service
 
 >Intelmq basic dataflow diagram
 
-![dataflow](/img/inelmq-dataflow.png)
+![dataflow](/img/inelmq-dataflow.PNG)
 
 ### How to install IntelMQ-Manager?
 
@@ -213,9 +213,13 @@ Then update proper configuration for runtime.conf and pipeline.conf. Add destina
 
 ---
 
+>After adding **elasticsearch-output** bot-id in pipeline.conf file. Update **cymru-whois-expert** field with **elasticsearch-output-queue** as a **destination-queue**.field. And also add **elasticsearch-output-queue** field in **elasticsearch-output** as a **source-queue**
+
 ![pipeline.cof](/img/pipeline.conf.png)
 
 ---
+
+>After adding **elasticsearch-output** bot in runtime.conf file 
 
 ![runtime.cof](/img/runtime.conf.png)
 
