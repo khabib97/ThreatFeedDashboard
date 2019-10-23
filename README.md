@@ -1,6 +1,6 @@
 # Threat Feed Dashboard
 
-![dashboard](/img/main_dashboard.png)
+![kibana dashboard](/img/main_dashboard.png)
 ## Integration of IntelMQ, ElasticSearch and Kibana
 
 At first we should know about them and their usages.
@@ -194,14 +194,21 @@ Feed BOT > Parser BOT > Expert BOT > Output
 
 * Check topoloy's status or health( notify misconfiguration, error etc)
 
->After drawing a new topolgy, you must update pipline.conf and runtime.conf file (location : /opt/intelmq/etc/)
-For any bot please check /opt/intelmq/ect/BOT file. You will get maximum clue from here. When you want to add a new bot, you can check BOT file, copy your required bot's json portion and add it in runtime.conf file. 
-In pipline, you should define bots input and output data queue. To write a proper and error free pipline.conf file, you should carefully read /opt/intelmq/ect/examples/pipline.conf file first. Then you can understand how to write a pipline.conf file.
+>After drawing a new topolgy, you must update pipeline.conf and runtime.conf file (location : /opt/intelmq/etc/)
+
+>For any bot please check /opt/intelmq/ect/BOT file. You will get maximum clue from here. When you want to add a new bot, you can check BOT file, copy your required bot's json portion and add it in runtime.conf file. 
+In pipeline, you should define bots input and output data queue. To write a proper and error free pipeline.conf file, you should carefully read /opt/intelmq/ect/examples/pipeline.conf file first. Then you can understand how to write a pipeline.conf file.
 
 ### Create elasticsearh-output
 
 * Add a elasticsearch-output node from intelmq-manager>configuration (gui). Go left side menubar Output > Elasticsearch, drag and drop new node. 
-Then update proper configuration for runtime.conf and pipline.conf. Add destination-queue and source-queue.
+Then update proper configuration for runtime.conf and pipeline.conf. Add destination-queue and source-queue.
+
+![topology](/img/intelmq-conf.png)
+
+![pipeline.cof](/img/pipeline.conf.png)
+
+![runtime.cof](/img/runtime.conf.png)
 
 ### Run your BOTS
 
@@ -229,6 +236,8 @@ $intelmqctl check
 * After starting bots, if everything ok, you will get **intelmq** data in **kibana** for creating *index-pattern*. 
 
 ### Visualize on dashboard
+
+![index-pattern](/img/kibana_intelmq_index.png)
 
 * Create index-pattern.
 
